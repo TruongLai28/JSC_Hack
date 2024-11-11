@@ -1,5 +1,6 @@
 import asyncio
 import csv
+import re
 from playwright.async_api import async_playwright
 
 async def scrape_nasa_opportunities():
@@ -15,13 +16,26 @@ async def scrape_nasa_opportunities():
         await page.select_option('select.slds-select', '45')
         await page.wait_for_timeout(2000)
         
-        all_titles = []
+        opportunities = []  # List to store tuples of (title, description)
         page_number = 1
         
+        def clean_text(text: str) -> str:
+            # Remove extra whitespace and newlines
+            text = ' '.join(text.split())
+            # Replace multiple spaces with single space
+            text = re.sub(r'\s+', ' ', text)
+            # Remove any remaining special characters if needed
+            text = text.replace('"', "'")  # Replace double quotes with single quotes to avoid CSV issues
+            return text.strip()
+
         while True:
-            # Get titles from current page
+            # Get titles and descriptions from current page
             titles = await page.locator('c-ostem_-opportunity-results-card h2').all_text_contents()
-            all_titles.extend([title.strip() for title in titles])
+            descriptions = await page.locator('p.descriptionclass').all_text_contents()
+            
+            # Combine titles and descriptions, cleaning the text
+            for title, desc in zip(titles, descriptions):
+                opportunities.append((clean_text(title), clean_text(desc)))
             
             # Check for next button that's not disabled
             next_button = page.locator('button.slds-button_neutral:has-text("Next")')
@@ -37,14 +51,14 @@ async def scrape_nasa_opportunities():
             print(f"Scraped page {page_number}...")
 
         # Save to CSV
-        with open('nasa_opportunities.csv', 'w', newline='', encoding='utf-8') as file:
+        with open('ostem.csv', 'w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            writer.writerow(['ID', 'Title'])  # Write header
-            for i, title in enumerate(all_titles, 1):
-                writer.writerow([i, title])
+            writer.writerow(['ID', 'Title', 'Description'])
+            for i, (title, desc) in enumerate(opportunities, 1):
+                writer.writerow([i, title, desc])
 
-        print(f"\nTotal opportunities found: {len(all_titles)}")
-        print("Data saved to nasa_opportunities.csv")
+        print(f"\nTotal opportunities found: {len(opportunities)}")
+        print("Data saved to ostem.csv")
         await browser.close()
 
 if __name__ == "__main__":
