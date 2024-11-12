@@ -16,26 +16,48 @@ async def scrape_nasa_opportunities():
         await page.select_option('select.slds-select', '45')
         await page.wait_for_timeout(2000)
         
-        opportunities = []  # List to store tuples of (title, description)
+        opportunities = []  # List to store tuples of (title, description, url)
         page_number = 1
         
         def clean_text(text: str) -> str:
-            # Remove extra whitespace and newlines
             text = ' '.join(text.split())
-            # Replace multiple spaces with single space
             text = re.sub(r'\s+', ' ', text)
-            # Remove any remaining special characters if needed
-            text = text.replace('"', "'")  # Replace double quotes with single quotes to avoid CSV issues
+            text = text.replace('"', "'")
             return text.strip()
+
+        def clean_url_title(text: str) -> str:
+            # Remove special characters and parentheses
+            text = re.sub(r'[^\w\s-]', '', text)
+            # Remove extra whitespace
+            text = ' '.join(text.split())
+            # Convert to lowercase and replace spaces with hyphens
+            text = text.lower().replace(' ', '-')
+            return text
 
         while True:
             # Get titles and descriptions from current page
             titles = await page.locator('c-ostem_-opportunity-results-card h2').all_text_contents()
             descriptions = await page.locator('p.descriptionclass').all_text_contents()
             
-            # Combine titles and descriptions, cleaning the text
-            for title, desc in zip(titles, descriptions):
-                opportunities.append((clean_text(title), clean_text(desc)))
+            # Get all opportunity IDs from h2 elements
+            h2_elements = await page.locator('c-ostem_-opportunity-results-card h2').all()
+            urls = []
+            for h2 in h2_elements:
+                id = await h2.get_attribute('id')
+                if id:
+                    opportunity_id = id.split('-')[0]
+                    title_text = await h2.text_content()
+                    url_title = clean_url_title(title_text)
+                    url = f"https://stemgateway.nasa.gov/s/course-offering/{opportunity_id}/{url_title}"
+                    urls.append(url)
+            
+            # Combine titles, descriptions, and URLs
+            for title, desc, url in zip(titles, descriptions, urls):
+                opportunities.append((
+                    clean_text(title),
+                    clean_text(desc),
+                    url
+                ))
             
             # Check for next button that's not disabled
             next_button = page.locator('button.slds-button_neutral:has-text("Next")')
@@ -51,17 +73,15 @@ async def scrape_nasa_opportunities():
             print(f"Scraped page {page_number}...")
 
         # Save to CSV
-        with open('ostem.csv', 'w', newline='', encoding='utf-8') as file:
+        with open('nasa_opportunities.csv', 'w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            writer.writerow(['ID', 'Title', 'Description'])
-            for i, (title, desc) in enumerate(opportunities, 1):
-                writer.writerow([i, title, desc])
+            writer.writerow(['ID', 'Title', 'Description', 'URL'])
+            for i, (title, desc, url) in enumerate(opportunities, 1):
+                writer.writerow([i, title, desc, url])
 
         print(f"\nTotal opportunities found: {len(opportunities)}")
-        print("Data saved to ostem.csv")
+        print("Data saved to nasa_opportunities.csv")
         await browser.close()
 
 if __name__ == "__main__":
     asyncio.run(scrape_nasa_opportunities())
-
-
