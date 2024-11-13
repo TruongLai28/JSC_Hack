@@ -3,7 +3,7 @@ import csv
 import re
 from playwright.async_api import async_playwright
 
-async def scrape_nasa_opportunities():
+async def scraper():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
         page = await browser.new_page()
@@ -84,4 +84,4 @@ async def scrape_nasa_opportunities():
         await browser.close()
 
 if __name__ == "__main__":
-    asyncio.run(scrape_nasa_opportunities())
+    asyncio.run(scraper())
