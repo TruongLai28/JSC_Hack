@@ -35,9 +35,17 @@ async def scraper():
             return text
 
         while True:
-            # Get titles and descriptions from current page
+            # Get titles, descriptions, and types from current page
             titles = await page.locator('c-ostem_-opportunity-results-card h2').all_text_contents()
             descriptions = await page.locator('p.descriptionclass').all_text_contents()
+            
+            # Get opportunity types
+            type_buttons = await page.locator('c-ostem_-opportunity-results-card button.slds-button_neutral').all()
+            types = []
+            for button in type_buttons:
+                type_text = await button.text_content()
+                if any(keyword in type_text for keyword in ['Student', 'Educator']):
+                    types.append(type_text.strip())
             
             # Get all opportunity IDs from h2 elements
             h2_elements = await page.locator('c-ostem_-opportunity-results-card h2').all()
@@ -51,12 +59,13 @@ async def scraper():
                     url = f"https://stemgateway.nasa.gov/s/course-offering/{opportunity_id}/{url_title}"
                     urls.append(url)
             
-            # Combine titles, descriptions, and URLs
-            for title, desc, url in zip(titles, descriptions, urls):
+            # Combine titles, descriptions, URLs, and types
+            for title, desc, url, type_ in zip(titles, descriptions, urls, types):
                 opportunities.append((
                     clean_text(title),
                     clean_text(desc),
-                    url
+                    url,
+                    type_
                 ))
             
             # Check for next button that's not disabled
@@ -75,9 +84,9 @@ async def scraper():
         # Save to CSV
         with open('nasa_opportunities.csv', 'w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            writer.writerow(['ID', 'Title', 'Description', 'URL'])
-            for i, (title, desc, url) in enumerate(opportunities, 1):
-                writer.writerow([i, title, desc, url])
+            writer.writerow(['ID', 'Title', 'Description', 'URL', 'Type'])
+            for i, (title, desc, url, type_) in enumerate(opportunities, 1):
+                writer.writerow([i, title, desc, url, type_])
 
         print(f"\nTotal opportunities found: {len(opportunities)}")
         print("Data saved to nasa_opportunities.csv")
