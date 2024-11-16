@@ -1,133 +1,133 @@
-ID,Solicitation Title,Status,Solicitation ID
-1,2024 HERO Appendix E: NASA Human Research Program Flagship2 Opportunity,Due in 30 days,80JSC024NA001-FLAGSHIP2
-2,2025 HERO Appendix A: NASA Human Research Program Omnibus Opportunity,Due in 30 days,NNJ25ZSA001N-OMNIBUS
-3,A.14 Integrated  Water Field Campaign,Due in 30 days,NNH24ZDA001N-WFC
-4,A.32 Precipitation Measurements Mission and CloudSat and Calipso Science Team Recompete,Due in 30 days,NNH24ZDA001N-PMMCCST
-5,A.61 INjected Smoke and PYRocumulonimbus Experiment Science Team,Due in 30 days,NNH24ZDA001N-INSPYRE
-6,Astrophysics Senior Review 2025,Due in 30 days,ASTROSR25
-7,B.14 Heliophysics Early Career Investigator Program,Due in 30 days,NNH24ZDA001N-ECIP
-8,B.9 Heliophysics Low Cost Access to Space,Due in 30 days,NNH24ZDA001N-HLCAS
-9,C.18 Planetary Science Early Career Award,Due in 30 days,NNH24ZDA001N-ECA
-10,D.21 U.S. Contributions to Ariel Preparatory Science,Due in 30 days,NNH24ZDA001N-USCAPS
-11,D.3 Astrophysics Research and Analysis,Due in 30 days,NNH24ZDA001N-APRA
-12,D.7 Strategic Astrophysics Technology,Due in 30 days,NNH24ZDA001N-SAT
-13,F.9 Citizen Science Seed Funding Program,Due in 30 days,NNH24ZDA001N-CSSFP
-14,International Space Centers Collaboration: Human Health Science for Gateway Lunar Space Station,Due in 30 days,NNJ25ZSA001L
-15,"Request for Information: Conference on Lunar, Planetary and Space Sciences",Due in 30 days,NNH25ZDA006L
+ID,Solicitation Title,Status,Solicitation ID,URL
+1,2024 HERO Appendix E: NASA Human Research Program Flagship2 Opportunity,Due in 30 days,80JSC024NA001-FLAGSHIP2,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={11D46B6B-48EE-94B7-8DF9-EFF00EE55396}&path=open
+2,2025 HERO Appendix A: NASA Human Research Program Omnibus Opportunity,Due in 30 days,NNJ25ZSA001N-OMNIBUS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A23F0D52-547D-67EF-811E-7BDB6DCA6CC9}&path=open
+3,A.14 Integrated  Water Field Campaign,Due in 30 days,NNH24ZDA001N-WFC,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F0C2AA06-09BF-7B94-C0BD-78CC79718B15}&path=open
+4,A.32 Precipitation Measurements Mission and CloudSat and Calipso Science Team Recompete,Due in 30 days,NNH24ZDA001N-PMMCCST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={6D000D2C-C566-1DB7-DFC0-C62BE8BC1AEF}&path=open
+5,A.61 INjected Smoke and PYRocumulonimbus Experiment Science Team,Due in 30 days,NNH24ZDA001N-INSPYRE,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={01F8C0DA-01A4-E915-C444-DAC6420562A5}&path=open
+6,Astrophysics Senior Review 2025,Due in 30 days,ASTROSR25,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={E05E363B-4788-D001-A1EE-9ABADA5011D7}&path=open
+7,B.14 Heliophysics Early Career Investigator Program,Due in 30 days,NNH24ZDA001N-ECIP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A80865C6-28EB-A9D0-8482-F7F522F0B3B4}&path=open
+8,B.9 Heliophysics Low Cost Access to Space,Due in 30 days,NNH24ZDA001N-HLCAS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={3EA8A5A8-76CB-2CBD-2A24-0965AD1186FD}&path=open
+9,C.18 Planetary Science Early Career Award,Due in 30 days,NNH24ZDA001N-ECA,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={B83F054C-199A-09D7-E907-47260E4CBAB9}&path=open
+10,D.21 U.S. Contributions to Ariel Preparatory Science,Due in 30 days,NNH24ZDA001N-USCAPS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={C0A12E83-6C51-94E8-FEE4-2512E1C29EA9}&path=open
+11,D.3 Astrophysics Research and Analysis,Due in 30 days,NNH24ZDA001N-APRA,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={EE77611A-DA28-E724-A4B6-F838EF9CD1DD}&path=open
+12,D.7 Strategic Astrophysics Technology,Due in 30 days,NNH24ZDA001N-SAT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={818D9AFA-16F8-6F4D-9895-B879EE968932}&path=open
+13,F.9 Citizen Science Seed Funding Program,Due in 30 days,NNH24ZDA001N-CSSFP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={C1A886B7-D85A-7FAC-BD41-AAF8B2EAC6BC}&path=open
+14,International Space Centers Collaboration: Human Health Science for Gateway Lunar Space Station,Due in 30 days,NNJ25ZSA001L,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={258D617D-A15D-34CA-C1FD-695E8D2C0CF9}&path=open
+15,"Request for Information: Conference on Lunar, Planetary and Space Sciences",Due in 30 days,NNH25ZDA006L,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F4A7BCA4-D2D3-FCD4-F67F-DAD5742FA6B2}&path=open
 16,"South Pole-Aitken Basin sample Return and eXploration (SPARX):  Call for Science Definition Team (SDT) Member Nominations
-",Due in 30 days,NNH25ZDA004L
-17, Established Program to Stimulate Competitive Research (EPSCoR) Basic Research FY 2025,Open,NNH24ZHA003C-EPSCOR
-18,2024 Human Exploration Research Opportunities (HERO) Overview,Open,80JSC024NA001
-19,2025 Human Exploration Research Opportunities (HERO) NOFO,Open,NNJ25ZSA001N
-20,A.10 Sea Level Change Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SLCST
-21,A.11 Surface Water and Ocean Topography (SWOT) Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SWOTST
-22,A.13 Ocean Vector Winds Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-OVWST
-23,A.18 Atmospheric Composition: Radiation Sciences Program: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-RSP
-24,A.20 Atmospheric Composition: Tropospheric Composition Program: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-TCP
-25,A.22 NASA Energy and Water Cycle Study,Open,NNH24ZDA001N-NEWS
-26,A.26 Rapid Response and Novel Research in Earth Science,Open,NNH24ZDA001N-RRNES
-27,A.27 NASA-ISRO Synthetic Aperture Radar Mission (NISAR) Research and Applications Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-NISAR
-28,A.29 EMIT Science and Applications Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-EMIT
-29,A.30 Understanding Changes in High Mountain Asia: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-HMA
-30,A.31 Earth Science Imaging/Sounding Data Analysis from Earth Observing System to Earth System Observatory: Due Dates TBD,Open,NNH24ZDA001N-ESISDA
-31,A.33 Airborne Instrument Technology Transition: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-AITT
-32,A.35 Interdisciplinary Research In Earth Science: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-IDS
-33,A.36 The Science of PACE,Open,NNH24ZDA001N-PACE
-34,A.37 DSCOVR Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-DSCOVR
-35,A.38 Early Career Investigator Program in Earth Science: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ECIPES
-36,A.39 Earth Action: Water Resources: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-WATER
-37,A.4 Terrestrial Ecology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-TE
-38,A.40 Earth Action: Agriculture: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-AG
-39,A.41 SERVIR Applied Sciences Team,Open,NNH24ZDA001N-SERVIR
-40,A.46 Earth Action: Community Action for Equity and Environmental Justice: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-EEJ
-41,A.48 Commercial Smallsat Data Acquisition New Vendor Onramp Evaluation: Due Dates TBD,Open,NNH24ZDA001N-CNVOE
-42,A.49 Commercial Smallsat Data Scientific Analysis: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-CSDSA
-43,A.5 Carbon Cycle Science,Open,NNH24ZDA001N-CARBON
-44,A.51 Instrument Incubator Program: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-IIP
-45,A.52 Advanced Component Technology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ACT
-46,A.53 In-space Validation of Earth Science Technologies: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-INVEST
-47,A.54 Sustainable Land Imaging - Technology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SLIT
-48,A.55 Decadal Survey Incubation Program: Science and Technology,Open,NNH24ZDA001N-DSI
-49,A.56 Advanced Information Systems Technology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-AIST
-50,"A.57 Technology Development for Support of Wildland Fire Science, Management, and Disaster Mitigation: Not Solicited in ROSES-2024",Open,NNH24ZDA001N-FIRET
-51,A.59 New or Modified GLOBE Protocols: Due Dates TBD,Open,NNH24ZDA001N-NMGP
-52,A.6 Carbon Monitoring System: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-CMS
-53,A.60 Earth Action: Ecological Conservation,Open,NNH24ZDA001N-ECON
-54,A.8 Physical Oceanography: Not solicited in ROSES-2024,Open,NNH24ZDA001N-PO
-55,A.9 Ocean Salinity Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-OSST
-56,B.13 Heliophysics U.S. Participating Investigator,Open,NNH24ZDA001N-HUSPI
-57,B.15 Heliophysics Innovation in Technology and Science,Open,NNH24ZDA001N-HITS
-58,B.16 Heliophysics Artificial Intelligence/Machine Learning-Ready Data,Open,NNH24ZDA001N-HARD
-59,B.17 Interdisciplinary Science for Eclipse: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ISE
-60,B.18 Living With a Star Tools and Methods: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-LWSTM
-61,B.19 Heliophysics Living with a Star Infrastructure: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-LWSIS
-62,B.20 Heliophysics Tools and Methods,Open,NNH24ZDA001N-HTM
-63,B.21 Heliophysics Citizen Science Investigations,Open,NNH24ZDA001N-HCSI
-64,"B.3 Heliophysics Theory, Modeling and Simulations: Not Solicited in ROSES-2024",Open,NNH24ZDA001N-HTMS
-65,B.6 Living with a Star Strategic Capabilities: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-LWSSC
-66,B.7 Space Weather Science Application Research-to-Operations-to-Research: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SWR2O2R
-67,C.12 Planetary Instrument Concepts for the Advancement of Solar System Observations,Open,NNH24ZDA001N-PICASSO
-68,C.14 Planetary Science and Technology Through Analog Research: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-PSTAR
-69,C.16 Laboratory Analysis of Returned Samples,Open,NNH24ZDA001N-LARS
-70,C.2 Emerging Worlds,Open,NNH24ZDA001N-EW
-71,C.20 Interdisciplinary Consortia for Astrobiology Research,Open,NNH24ZDA001N-ICAR
-72,C.23 Analog Activities to Support Artemis Lunar Operations: not solicited in ROSES-2024,Open,NNH24ZDA001N-AA4ALO
-73,C.24 Here to Observe,Open,NNH24ZDA001N-H2O
-74,C.3 Solar System Workings,Open,NNH24ZDA001N-SSW
-75,"C.4 Planetary Data Archiving, Restoration, and Tools",Open,NNH24ZDA001N-PDART
-76,C.5 Exobiology,Open,NNH24ZDA001N-EXO
-77,C.6 Solar System Observations,Open,NNH24ZDA001N-SSO
-78,C.8 Lunar Data Analysis Program,Open,NNH24ZDA001N-LDAP
-79,D.10 TESS General Investigator - Cycle 8: Due Dates TBD,Open,NNH24ZDA001N-TESS
-80,D.12 Theoretical and Computational Astrophysics Networks: Due Dates TBD,Open,NNH24ZDA001N-TCAN
-81,D.13 Astrophysics Pioneers,Open,NNH24ZDA001N-PIONEERS
-82,D.15 LISA Preparatory Science,Open,NNH24ZDA001N-LPS
-83,D.17 XRISM General Observer Cycle 2: Due Dates TBD,Open,NNH24ZDA001N-XGO
-84,D.19 Habitable Worlds Observatory System Technology Demonstrations and Mission Architecture Studies,Open,NNH24ZDA001N-HWOTAS
-85,D.20 Exoplanet Mass Measurement Program,Open,NNH24ZDA001N-EMMP
-86,D.4 Astrophysics Theory: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ATP
-87,D.6 Fermi General Investigator - Cycle 18,Open,NNH24ZDA001N-FERMI
-88,D.8 Nancy Grace Roman Technology Fellowships in Space Astrophysics for Early Career Researchers,Open,NNH24ZDA001N-RTF
-89,D.9 NuSTAR General Observer - Cycle 11,Open,NNH24ZDA001N-NUSTAR
-90,"DRAFT F.18 Mentorship and Opportunities in STEM with Academic Institutions for Community Success (MOSAICS) Five-Year Collaboration Awards comments due November 22, 2024",Open,NNH24ZDA001N-M5YCA
-91,E.10 Space Biology: Animal Studies: Due Dates TBD,Open,NNH24ZDA001N-SBAS
-92,E.2 Biophysics: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-BIOPHYS
-93,E.3 Soft Matter/Complex Fluids: Due Dates TBD,Open,NNH24ZDA001N-SMCF
-94,E.4 Combustion Science: Due Dates TBD,Open,NNH24ZDA001N-CS
-95,E.5 Fluid Physics: Due Dates TBD,Open,NNH24ZDA001N-FLUPHYS
-96,E.6 Fundamental Physics: Due Dates TBD,Open,NNH24ZDA001N-FUNPHYS
-97,E.7 Materials Science: Due Dates TBD,Open,NNH24ZDA001N-MS
-98,E.8 Physical Sciences Informatics: Due Dates TBD,Open,NNH24ZDA001N-PSI
-99,E.9 Space Biology: Plant Studies: Due Dates TBD,Open,NNH24ZDA001N-SBPS
-100,ENGAGEMENT OPPORTUNITIES IN NASA STEM FY2023 (EONS-2023),Open,NNH23ZHA001N
-101,ENGAGEMENT OPPORTUNITIES IN NASA STEM FY2024 (EONS-2024),Open,NNH24ZHA003C
-102,Established Program to Stimulate Competitive Research (EPSCoR) Rapid Response Research (R3) FY 2025,Open,NNH24ZHA003C-EPSCORR3
-103,Expressions of interest for No-Cost Participation in / Contributions to the INjected Smoke and PYRocumulonimbus Experiment Science Team,Open,NNH25ZDA005L
-104,F.10 Payloads and Research Investigations on the Surface of the Moon: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-PRISM
-105,F.12 Artemis IV Deployed Instruments Program,Open,NNH24ZDA001N-A4DI
-106,F.13 Lunar Terrain Vehicle Instruments,Open,NNH24ZDA001N-LTVI
-107,F.14 High Priority Open-Source Science,Open,NNH24ZDA001N-HPOSS
-108,F.16 Innovation Corps Pilot,Open,NNH24ZDA001N-ICOR
-109,F.17 Multidomain Reusable Artificial Intelligence Tools: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-MDRAIT
-110,F.20 Mentorship and Opportunities in STEM with Academic Institutions for Community Success (MOSAICS) Seed Funding,Open,NNH24ZDA001N-MSF
-111,F.4 Habitable Worlds,Open,NNH24ZDA001N-HW
-112,F.5 Future Investigators in NASA Earth and Space Science and Technology,Open,NNH24ZDA001N-FINESST
-113,F.6 Science Activation Program: Due Dates TBD,Open,NNH24ZDA001N-SCIACT
-114,F.8 Supplements for Open-Source Science,Open,NNH24ZDA001N-SOSS
-115,F.99 Principal Investigator Organization Change,Open,NNH24ZDA001N-PIMOVE24
-116,Human Research Program Single-Source - by invitation only (FY 2025),Open,HRPSS25
-117,MSL Participating Scientist Extension 2025,Open,MSLPSE25
-118,NASA Unsolicited Proposals,Open,UNSOL_FY2025
-119,Planetary Mission Senior Review 2025,Open,PMSR25
-120,Request for Information: Development of NASA-DARES 2025: The NASA Decadal Astrobiology Research and Exploration Strategy,Open,NNH25ZDA002L
-121,Research Opportunities for International Space Station Utilization,Open,NNJ13ZBG001N
-122,RESEARCH OPPORTUNITIES IN AERONAUTICS-2024 (ROA- 2024),Open,NNH24ZEA001N
-123,Research Opportunities in Physical Sciences (ROPS),Open,NNH20ZDA012N
-124,Research Opportunities in Space and Earth Sciences 2024 (ROSES-2024),Open,NNH24ZDA001N
-125,Science Mission Directorate Single-Source - by invitation only (2024),Open,SMDSS24
-126,Space Technology Research Development Demonstration and Infusion (SpaceTech REDDI),Open,NNH24ZTR001N
-127,Space Technology Research Development Demonstration and Infusion (SpaceTech REDDI),Open,NNH25ZTR001N
-128,Topical Workshops Symposiums and Conferences (TWSC-24) in Space and Earth Sciences and Technology,Open,NNH24ZDA002N
-129,TRISH Announcement Soliciting Postdoctoral Fellowship Applications,Open,TRISHRFA2501PD
-130,University Student Research Challenge (USRC),Open,NNH24ZEA001N-USRC
-131,XMM-Newton C Targets for Fiscal Year 2025,Open,XMMNCT_FY25
+",Due in 30 days,NNH25ZDA004L,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={1EE6193C-297D-982D-4D70-2050D6AC8431}&path=open
+17, Established Program to Stimulate Competitive Research (EPSCoR) Basic Research FY 2025,Open,NNH24ZHA003C-EPSCOR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={966A5FA6-79A0-9647-0F43-6598D0E8A79F}&path=open
+18,2024 Human Exploration Research Opportunities (HERO) Overview,Open,80JSC024NA001,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={467D3677-A1E4-7369-3FF2-E0FE15E7B326}&path=open
+19,2025 Human Exploration Research Opportunities (HERO) NOFO,Open,NNJ25ZSA001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={0FCFE162-702B-B48A-F815-7D6E4C6C85E7}&path=open
+20,A.10 Sea Level Change Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SLCST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D7255D00-8AC7-C9D2-E80B-8E97DEBEEAAD}&path=open
+21,A.11 Surface Water and Ocean Topography (SWOT) Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SWOTST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A13F194D-26D8-18C2-8AD7-3503F5D6C434}&path=open
+22,A.13 Ocean Vector Winds Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-OVWST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F9C230E7-ED8D-D973-7549-54DEE6995502}&path=open
+23,A.18 Atmospheric Composition: Radiation Sciences Program: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-RSP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={1EF94E26-8AD2-6881-A1A8-F8FD3E0FA0C4}&path=open
+24,A.20 Atmospheric Composition: Tropospheric Composition Program: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-TCP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={27661505-316A-366C-709D-BB1DF5B62696}&path=open
+25,A.22 NASA Energy and Water Cycle Study,Open,NNH24ZDA001N-NEWS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D7C69A72-3D85-6E10-8746-5B844B2C97A5}&path=open
+26,A.26 Rapid Response and Novel Research in Earth Science,Open,NNH24ZDA001N-RRNES,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={7CBDCC1F-94AF-8E8E-17E0-8F5D3CA1B1E7}&path=open
+27,A.27 NASA-ISRO Synthetic Aperture Radar Mission (NISAR) Research and Applications Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-NISAR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={26099298-ACCA-00C5-3B87-3C358CD396C6}&path=open
+28,A.29 EMIT Science and Applications Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-EMIT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={FDE22609-9FB3-8138-D3A6-AE28AA323711}&path=open
+29,A.30 Understanding Changes in High Mountain Asia: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-HMA,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={30BD30BD-3E3E-EA1B-B265-FC376AD6983E}&path=open
+30,A.31 Earth Science Imaging/Sounding Data Analysis from Earth Observing System to Earth System Observatory: Due Dates TBD,Open,NNH24ZDA001N-ESISDA,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={DC104269-3882-5607-2AE8-7D28DA492F8D}&path=open
+31,A.33 Airborne Instrument Technology Transition: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-AITT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={8CA18C55-A018-A747-A4D4-1DE6FE3E1812}&path=open
+32,A.35 Interdisciplinary Research In Earth Science: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-IDS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={2533A10C-E590-92C3-D254-3C9872DBFB7D}&path=open
+33,A.36 The Science of PACE,Open,NNH24ZDA001N-PACE,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={027B9977-DC14-0CF8-61F2-3DEF17980BE7}&path=open
+34,A.37 DSCOVR Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-DSCOVR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={E673D8E6-2B23-10C4-7BDB-399EA69A8DD7}&path=open
+35,A.38 Early Career Investigator Program in Earth Science: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ECIPES,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D46645AE-8E26-FB77-6690-F581608CF286}&path=open
+36,A.39 Earth Action: Water Resources: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-WATER,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={758FF82B-01D6-5997-D12C-EFD0552399CC}&path=open
+37,A.4 Terrestrial Ecology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-TE,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={AD0010D0-5D24-9A3B-27CB-045E38F11CB2}&path=open
+38,A.40 Earth Action: Agriculture: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-AG,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={CCF7F655-B355-057D-4868-7154FC96AB81}&path=open
+39,A.41 SERVIR Applied Sciences Team,Open,NNH24ZDA001N-SERVIR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={03788043-16C1-1D13-1184-90EB730C7805}&path=open
+40,A.46 Earth Action: Community Action for Equity and Environmental Justice: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-EEJ,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={EBDFFD08-6771-0B71-DD2E-664C1BDEA9CE}&path=open
+41,A.48 Commercial Smallsat Data Acquisition New Vendor Onramp Evaluation: Due Dates TBD,Open,NNH24ZDA001N-CNVOE,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={5DF8169C-C75C-C36D-A165-8C2CC1F98897}&path=open
+42,A.49 Commercial Smallsat Data Scientific Analysis: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-CSDSA,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F31A6EDB-A7B7-B812-3BF8-E6F99FB712BD}&path=open
+43,A.5 Carbon Cycle Science,Open,NNH24ZDA001N-CARBON,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={C9E03D39-95C3-81BB-5875-3156AE1F7DA5}&path=open
+44,A.51 Instrument Incubator Program: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-IIP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={9DCB22E5-20C0-598C-7819-058C058E702D}&path=open
+45,A.52 Advanced Component Technology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ACT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={B6FE06BB-5513-A52B-DB0F-A1964866C6BF}&path=open
+46,A.53 In-space Validation of Earth Science Technologies: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-INVEST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={7E725636-82C4-D1A4-C383-3F078595E017}&path=open
+47,A.54 Sustainable Land Imaging - Technology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SLIT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={6C591DE9-9F65-939C-3A3F-B7004EF73D33}&path=open
+48,A.55 Decadal Survey Incubation Program: Science and Technology,Open,NNH24ZDA001N-DSI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={2BD2A102-B677-2215-4631-48D40D46193F}&path=open
+49,A.56 Advanced Information Systems Technology: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-AIST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={7B4DC62B-E087-5F22-1909-FDC455468753}&path=open
+50,"A.57 Technology Development for Support of Wildland Fire Science, Management, and Disaster Mitigation: Not Solicited in ROSES-2024",Open,NNH24ZDA001N-FIRET,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={906DB44A-E7DF-5163-E6A7-A9F3A34C740C}&path=open
+51,A.59 New or Modified GLOBE Protocols: Due Dates TBD,Open,NNH24ZDA001N-NMGP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F9E577BB-347B-9174-07AE-3834792152A9}&path=open
+52,A.6 Carbon Monitoring System: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-CMS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={BDA3757D-4DC8-D764-1F48-828F232C07AB}&path=open
+53,A.60 Earth Action: Ecological Conservation,Open,NNH24ZDA001N-ECON,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={9E6792EF-EF8C-A83B-9A10-51A35953C999}&path=open
+54,A.8 Physical Oceanography: Not solicited in ROSES-2024,Open,NNH24ZDA001N-PO,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={02622166-5DBC-DABA-97C2-BA460781F101}&path=open
+55,A.9 Ocean Salinity Science Team: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-OSST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D040F39E-5130-E39B-F464-B7105A62EB3D}&path=open
+56,B.13 Heliophysics U.S. Participating Investigator,Open,NNH24ZDA001N-HUSPI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={62C1FD19-24B6-5C11-4128-4C27C742AB7D}&path=open
+57,B.15 Heliophysics Innovation in Technology and Science,Open,NNH24ZDA001N-HITS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={77B15381-E037-1FD4-9189-23CD8DA16F83}&path=open
+58,B.16 Heliophysics Artificial Intelligence/Machine Learning-Ready Data,Open,NNH24ZDA001N-HARD,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={41D79137-45BA-AA7B-D24D-8966E045CDA3}&path=open
+59,B.17 Interdisciplinary Science for Eclipse: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ISE,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={E36A2C48-719C-1FAC-9151-877BA3915C61}&path=open
+60,B.18 Living With a Star Tools and Methods: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-LWSTM,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D54F74E2-5B42-B2DB-0255-433AD1DE3735}&path=open
+61,B.19 Heliophysics Living with a Star Infrastructure: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-LWSIS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={352A59C2-3385-094E-0F69-F556F0B4AA11}&path=open
+62,B.20 Heliophysics Tools and Methods,Open,NNH24ZDA001N-HTM,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={B6427244-7A85-B350-C5EB-505330B1539E}&path=open
+63,B.21 Heliophysics Citizen Science Investigations,Open,NNH24ZDA001N-HCSI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={65E54EB7-7CF7-1134-8420-7D7253E22F1E}&path=open
+64,"B.3 Heliophysics Theory, Modeling and Simulations: Not Solicited in ROSES-2024",Open,NNH24ZDA001N-HTMS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={6C02F475-C9F1-62CC-58C3-51230A6DED4D}&path=open
+65,B.6 Living with a Star Strategic Capabilities: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-LWSSC,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={273F4AAB-C54F-FB54-AB64-302D0EC80B63}&path=open
+66,B.7 Space Weather Science Application Research-to-Operations-to-Research: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-SWR2O2R,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={8C8068C9-F284-4206-5186-67DB330173EC}&path=open
+67,C.12 Planetary Instrument Concepts for the Advancement of Solar System Observations,Open,NNH24ZDA001N-PICASSO,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={ECDF36AB-5845-2BC5-3C27-2D9184E30F09}&path=open
+68,C.14 Planetary Science and Technology Through Analog Research: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-PSTAR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={710F9D49-8423-C001-F133-E360D2C9F731}&path=open
+69,C.16 Laboratory Analysis of Returned Samples,Open,NNH24ZDA001N-LARS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A093C691-6012-CC79-624B-99E07574503D}&path=open
+70,C.2 Emerging Worlds,Open,NNH24ZDA001N-EW,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={2A8AEAE0-D677-2337-04A8-F1689D834265}&path=open
+71,C.20 Interdisciplinary Consortia for Astrobiology Research,Open,NNH24ZDA001N-ICAR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={3D196E9B-0D83-A882-C488-CA112557D945}&path=open
+72,C.23 Analog Activities to Support Artemis Lunar Operations: not solicited in ROSES-2024,Open,NNH24ZDA001N-AA4ALO,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={36590CEF-D30A-DFDA-EE45-F6C56E9460D5}&path=open
+73,C.24 Here to Observe,Open,NNH24ZDA001N-H2O,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={E73B60E4-F7B9-9BFF-7E84-71A0C24BA204}&path=open
+74,C.3 Solar System Workings,Open,NNH24ZDA001N-SSW,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={944C9FF1-979D-BA46-7AEA-78AB7891B012}&path=open
+75,"C.4 Planetary Data Archiving, Restoration, and Tools",Open,NNH24ZDA001N-PDART,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={AD662F31-BBF6-802D-06F1-A1C74D07502B}&path=open
+76,C.5 Exobiology,Open,NNH24ZDA001N-EXO,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={BADAE37E-660E-1F92-0FF9-3467EBE3749C}&path=open
+77,C.6 Solar System Observations,Open,NNH24ZDA001N-SSO,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D763331F-0C13-E06B-E049-27C8808F802F}&path=open
+78,C.8 Lunar Data Analysis Program,Open,NNH24ZDA001N-LDAP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={CD554FF5-5F05-3833-5120-985C271695D7}&path=open
+79,D.10 TESS General Investigator - Cycle 8: Due Dates TBD,Open,NNH24ZDA001N-TESS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={C5F89429-F4A5-1E74-AC89-49F7DB4DD67B}&path=open
+80,D.12 Theoretical and Computational Astrophysics Networks: Due Dates TBD,Open,NNH24ZDA001N-TCAN,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={33A639AF-404C-8AFF-5F85-6188C496C635}&path=open
+81,D.13 Astrophysics Pioneers,Open,NNH24ZDA001N-PIONEERS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={8C8C2628-3976-F04F-DC88-70706B738C94}&path=open
+82,D.15 LISA Preparatory Science,Open,NNH24ZDA001N-LPS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={05108FA8-5F27-3547-BBAF-0284D97BA62F}&path=open
+83,D.17 XRISM General Observer Cycle 2: Due Dates TBD,Open,NNH24ZDA001N-XGO,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={5B6B166E-3830-8FD5-9793-EFBA1AE7EB8A}&path=open
+84,D.19 Habitable Worlds Observatory System Technology Demonstrations and Mission Architecture Studies,Open,NNH24ZDA001N-HWOTAS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={90F5A9B0-8948-3EBB-C15F-3A89573DB223}&path=open
+85,D.20 Exoplanet Mass Measurement Program,Open,NNH24ZDA001N-EMMP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={4B711EDE-75AF-5D9D-963D-C5D15D5F9529}&path=open
+86,D.4 Astrophysics Theory: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-ATP,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D5B14905-82C4-D63B-1E42-266D70AEC326}&path=open
+87,D.6 Fermi General Investigator - Cycle 18,Open,NNH24ZDA001N-FERMI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={B68A2CC5-86AB-CC21-0F40-42B0E2E594C0}&path=open
+88,D.8 Nancy Grace Roman Technology Fellowships in Space Astrophysics for Early Career Researchers,Open,NNH24ZDA001N-RTF,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={40F8A0E3-0053-AFB7-03A6-CEE078C08DB8}&path=open
+89,D.9 NuSTAR General Observer - Cycle 11,Open,NNH24ZDA001N-NUSTAR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={445C1A36-9CE4-6AC2-312F-00A97BDC06BA}&path=open
+90,"DRAFT F.18 Mentorship and Opportunities in STEM with Academic Institutions for Community Success (MOSAICS) Five-Year Collaboration Awards comments due November 22, 2024",Open,NNH24ZDA001N-M5YCA,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={41E2A9B6-4E00-FB36-4A9A-68D9319DAF21}&path=open
+91,E.10 Space Biology: Animal Studies: Due Dates TBD,Open,NNH24ZDA001N-SBAS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={B8421272-1A47-8147-5FEA-3B13D938EB48}&path=open
+92,E.2 Biophysics: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-BIOPHYS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={26E5A83E-3495-B31B-59E5-46C3CED4113E}&path=open
+93,E.3 Soft Matter/Complex Fluids: Due Dates TBD,Open,NNH24ZDA001N-SMCF,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={32A38391-D14C-24E4-25F4-17BDCAF29339}&path=open
+94,E.4 Combustion Science: Due Dates TBD,Open,NNH24ZDA001N-CS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={E25FFCAE-A421-794E-95A4-1CF490642CEE}&path=open
+95,E.5 Fluid Physics: Due Dates TBD,Open,NNH24ZDA001N-FLUPHYS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={9E676281-DE2B-98FA-E337-2E54A941ED61}&path=open
+96,E.6 Fundamental Physics: Due Dates TBD,Open,NNH24ZDA001N-FUNPHYS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={41D628DE-91BE-6F79-15FB-D2AC9DF2ACA9}&path=open
+97,E.7 Materials Science: Due Dates TBD,Open,NNH24ZDA001N-MS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={495B7494-15C0-3493-6E11-144A254C6708}&path=open
+98,E.8 Physical Sciences Informatics: Due Dates TBD,Open,NNH24ZDA001N-PSI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={2C7DCB42-3C12-FC0B-6F88-35FFF0BE8D69}&path=open
+99,E.9 Space Biology: Plant Studies: Due Dates TBD,Open,NNH24ZDA001N-SBPS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={6918D3E8-8278-FC53-42DE-D82927D46223}&path=open
+100,ENGAGEMENT OPPORTUNITIES IN NASA STEM FY2023 (EONS-2023),Open,NNH23ZHA001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={9E2F0E67-A2E7-94B4-DE05-35E0F88B434B}&path=open
+101,ENGAGEMENT OPPORTUNITIES IN NASA STEM FY2024 (EONS-2024),Open,NNH24ZHA003C,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F6B66556-15FA-527B-5212-037D0D2DC3FC}&path=open
+102,Established Program to Stimulate Competitive Research (EPSCoR) Rapid Response Research (R3) FY 2025,Open,NNH24ZHA003C-EPSCORR3,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D8604BE7-CAB6-C1C0-B668-423042C43AA6}&path=open
+103,Expressions of interest for No-Cost Participation in / Contributions to the INjected Smoke and PYRocumulonimbus Experiment Science Team,Open,NNH25ZDA005L,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A7EB86F2-F34C-8652-2887-09298B45C4DE}&path=open
+104,F.10 Payloads and Research Investigations on the Surface of the Moon: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-PRISM,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D18CDC51-5FB4-1246-86F7-1E127E2BE74F}&path=open
+105,F.12 Artemis IV Deployed Instruments Program,Open,NNH24ZDA001N-A4DI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A2E6F92B-D1CD-85F6-C583-C2ACC955B340}&path=open
+106,F.13 Lunar Terrain Vehicle Instruments,Open,NNH24ZDA001N-LTVI,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={564C34E1-AD06-31DB-6E0D-4CDB3B1B4B66}&path=open
+107,F.14 High Priority Open-Source Science,Open,NNH24ZDA001N-HPOSS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F00E69A7-D2FB-8C27-6842-61D3C3C475D1}&path=open
+108,F.16 Innovation Corps Pilot,Open,NNH24ZDA001N-ICOR,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A13F78F3-0F5B-D287-1246-3A24CAD2404A}&path=open
+109,F.17 Multidomain Reusable Artificial Intelligence Tools: Not Solicited in ROSES-2024,Open,NNH24ZDA001N-MDRAIT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={C000C348-6CF5-81B1-AB5D-AD6821C20D62}&path=open
+110,F.20 Mentorship and Opportunities in STEM with Academic Institutions for Community Success (MOSAICS) Seed Funding,Open,NNH24ZDA001N-MSF,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={B9C94DB4-E679-3CAA-398D-830387955F4D}&path=open
+111,F.4 Habitable Worlds,Open,NNH24ZDA001N-HW,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={DD2B865C-D558-4F6B-5B93-4CED6D8824DE}&path=open
+112,F.5 Future Investigators in NASA Earth and Space Science and Technology,Open,NNH24ZDA001N-FINESST,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={2AAB44BB-6DFB-C42E-315A-DC2D70683A9D}&path=open
+113,F.6 Science Activation Program: Due Dates TBD,Open,NNH24ZDA001N-SCIACT,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D48A26B5-EF14-F957-F2F1-4C59995A52AE}&path=open
+114,F.8 Supplements for Open-Source Science,Open,NNH24ZDA001N-SOSS,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={C1EE705E-34F3-1143-637F-3D4581EB5AF5}&path=open
+115,F.99 Principal Investigator Organization Change,Open,NNH24ZDA001N-PIMOVE24,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={4D137E43-D97C-4945-1518-9AE645FCB54E}&path=open
+116,Human Research Program Single-Source - by invitation only (FY 2025),Open,HRPSS25,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={A9E820F3-D6E9-688E-AFDD-EBC6D4EA6C65}&path=open
+117,MSL Participating Scientist Extension 2025,Open,MSLPSE25,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={6080CCEA-B72A-74AF-DCD9-3CAF3FCE25A1}&path=open
+118,NASA Unsolicited Proposals,Open,UNSOL_FY2025,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={0E8FB04A-0305-DC80-2932-AB70DBCB9BB2}&path=open
+119,Planetary Mission Senior Review 2025,Open,PMSR25,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={ACE1A611-0B78-3E1B-B58E-D47034D28D66}&path=open
+120,Request for Information: Development of NASA-DARES 2025: The NASA Decadal Astrobiology Research and Exploration Strategy,Open,NNH25ZDA002L,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={4EC1A189-E5BF-88FE-4FEF-F7D1F448FE0D}&path=open
+121,Research Opportunities for International Space Station Utilization,Open,NNJ13ZBG001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={21E0270C-BC1F-EFC4-3D87-30713B5FF373}&path=open
+122,RESEARCH OPPORTUNITIES IN AERONAUTICS-2024 (ROA- 2024),Open,NNH24ZEA001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={CD0E90F9-A540-10C4-8E5E-B0EC0FA18298}&path=open
+123,Research Opportunities in Physical Sciences (ROPS),Open,NNH20ZDA012N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={D9D65C42-4CF6-8775-EA06-B9860E2B3C1F}&path=open
+124,Research Opportunities in Space and Earth Sciences 2024 (ROSES-2024),Open,NNH24ZDA001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={600EE5E5-E9D5-FF55-0CAD-764F6D4BEEA9}&path=open
+125,Science Mission Directorate Single-Source - by invitation only (2024),Open,SMDSS24,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={2E6F2455-FE7B-A021-4F6D-8DE178A21408}&path=open
+126,Space Technology Research Development Demonstration and Infusion (SpaceTech REDDI),Open,NNH24ZTR001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={12BC22A2-6DD9-47F7-BC2B-E9147A2C5977}&path=open
+127,Space Technology Research Development Demonstration and Infusion (SpaceTech REDDI),Open,NNH25ZTR001N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={6DE6AFEA-9750-2502-931F-D05584D1A3CE}&path=open
+128,Topical Workshops Symposiums and Conferences (TWSC-24) in Space and Earth Sciences and Technology,Open,NNH24ZDA002N,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={805EEF3B-DC64-A447-3EAD-66D23A9501EE}&path=open
+129,TRISH Announcement Soliciting Postdoctoral Fellowship Applications,Open,TRISHRFA2501PD,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={5F6054B3-ABD0-2160-5A54-DC2FC0B54566}&path=open
+130,University Student Research Challenge (USRC),Open,NNH24ZEA001N-USRC,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={F97021D4-09B1-92EF-44F9-692818541E49}&path=open
+131,XMM-Newton C Targets for Fiscal Year 2025,Open,XMMNCT_FY25,https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={0BA5A904-60AF-8EF7-04DC-E409F8DDD171}&path=open

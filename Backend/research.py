@@ -16,7 +16,7 @@ async def scraper():
         
         await page.wait_for_timeout(2000)
         
-        # Updated evaluation to get all required fields
+        # Updated evaluation to get URLs along with other fields
         solicitations = await page.evaluate('''
             () => {
                 const rows = document.querySelectorAll('table#openSolicitations tbody tr');
@@ -27,6 +27,7 @@ async def scraper():
                     
                     return {
                         title: titleLink ? titleLink.textContent : '',
+                        url: titleLink ? titleLink.href : '',
                         status: statusSpan ? statusSpan.getAttribute('title') : '',
                         solicitation_id: solIdElement ? solIdElement.textContent.trim() : ''
                     };
@@ -43,13 +44,14 @@ async def main():
     # Save results to CSV with additional columns
     with open('solicitations.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(['ID', 'Solicitation Title', 'Status', 'Solicitation ID'])
+        writer.writerow(['ID', 'Solicitation Title', 'Status', 'Solicitation ID', 'URL'])
         for index, item in enumerate(results, 1):
             writer.writerow([
                 index,
                 item['title'],
                 item['status'],
-                item['solicitation_id']
+                item['solicitation_id'],
+                item['url']
             ])
     
     print(f"Total solicitations found: {len(results)}")
