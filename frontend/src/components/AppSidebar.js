@@ -11,27 +11,35 @@ import {
     SidebarFooter,
   } from "@/components/ui/sidebar";
   
-  // Menu items.
+  // Import HeroIcons
+  import { HomeIcon, RocketLaunchIcon, AcademicCapIcon, BeakerIcon, CalendarIcon } from "@heroicons/react/24/outline";
+  
+  // Menu items with HeroIcons
   const items = [
     {
       title: "Home",
       url: "#",
+      icon: HomeIcon,
     },
     {
-      title: "Inbox",
+      title: "Launchpad",
       url: "#",
+      icon: RocketLaunchIcon,
     },
     {
-      title: "Calendar",
+      title: "Internships",
       url: "#",
+      icon: AcademicCapIcon,
     },
     {
-      title: "Search",
+      title: "Research",
       url: "#",
+      icon: BeakerIcon,
     },
     {
-      title: "Settings",
+      title: "Events",
       url: "#",
+      icon: CalendarIcon,
     },
   ];
   
@@ -47,7 +55,10 @@ import {
                 {items.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild>
-                      <a href={item.url}>
+                      <a href={item.url} className="flex items-center space-x-2">
+                        {/* Render Icon */}
+                        <item.icon className="h-5 w-5 text-gray-500" />
+                        {/* Render Title */}
                         <span>{item.title}</span>
                       </a>
                     </SidebarMenuButton>
