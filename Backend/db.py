@@ -1,10 +1,13 @@
 import chromadb
 import pandas as pd
 import chromadb.utils.embedding_functions as embedding_functions
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-    api_key=API_KEY,
+    api_key=os.getenv('API_KEY'),
     model_name="text-embedding-3-large"  # You can change to any of the three models
 )
 
