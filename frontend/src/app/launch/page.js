@@ -15,6 +15,7 @@ import { Badge } from '@/components/ui/badge';
 
 export default function LaunchPage() {
   const [selectedInterests, setSelectedInterests] = useState([]);
+<<<<<<< HEAD
   const [role, setRole] = useState('');
   const [fieldOfStudy, setFieldOfStudy] = useState('');
   const [results, setResults] = useState({
@@ -23,6 +24,8 @@ export default function LaunchPage() {
     event: null,
     research: null
   });
+=======
+>>>>>>> parent of 2b35164 (extra changes)
   const allInterests = [
     'Technology',
     'Science',
@@ -40,6 +43,7 @@ export default function LaunchPage() {
     );
   };
 
+<<<<<<< HEAD
   const handleSubmit = async () => {
     const query = `I'm ${role}, my field of study is ${fieldOfStudy} and my interests are ${selectedInterests.join(', ')}`;
     
@@ -86,6 +90,8 @@ export default function LaunchPage() {
     }
   };
 
+=======
+>>>>>>> parent of 2b35164 (extra changes)
   return (
     <div className='relative z-20 flex flex-col items-center justify-center min-h-screen'>
       {/* Header */}
@@ -93,28 +99,45 @@ export default function LaunchPage() {
         Launch Page
       </h1>
 
+<<<<<<< HEAD
       {/* "What are you?" Section - Updated with onChange */}
+=======
+      {/* "What are you?" Section */}
+>>>>>>> parent of 2b35164 (extra changes)
       <div className='w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md mb-6'>
         <h2 className='text-lg font-semibold mb-4 text-white'>What are you?</h2>
         <div className='space-y-3 text-white'>
           {['Student', 'Teacher', 'Both'].map((option) => (
             <div key={option} className='flex items-center space-x-2'>
+<<<<<<< HEAD
               <Checkbox 
                 id={option} 
                 className='bg-white border-gray-300'
                 checked={role === option}
                 onCheckedChange={() => setRole(option)}
               />
+=======
+              <Checkbox id={option} className='bg-white border-gray-300' />
+>>>>>>> parent of 2b35164 (extra changes)
               <Label htmlFor={option}>{option}</Label>
             </div>
           ))}
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* "Field of Study" Section - Updated with onChange */}
       <div className='w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md mb-6'>
         <h2 className='text-lg font-semibold mb-4 text-white'>Field of Study</h2>
         <Select onValueChange={setFieldOfStudy} value={fieldOfStudy}>
+=======
+      {/* "Field of Study" Section */}
+      <div className='w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md mb-6'>
+        <h2 className='text-lg font-semibold mb-4 text-white'>
+          Field of Study
+        </h2>
+        <Select>
+>>>>>>> parent of 2b35164 (extra changes)
           <SelectTrigger className='w-full'>
             <SelectValue placeholder='Select a field of study' />
           </SelectTrigger>
@@ -155,6 +178,7 @@ export default function LaunchPage() {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Submit Button - Updated with onClick */}
       <button 
@@ -163,6 +187,8 @@ export default function LaunchPage() {
       >
         Submit
       </button>
+=======
+>>>>>>> parent of 2b35164 (extra changes)
     </div>
   );
 }

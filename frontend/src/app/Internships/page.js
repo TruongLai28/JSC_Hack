@@ -76,4 +76,8 @@ export default function InternshipsPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 2b35164 (extra changes)
