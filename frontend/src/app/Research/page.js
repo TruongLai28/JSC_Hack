@@ -10,42 +10,50 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-export default function ResearchPage() {
-  const researchEntries = [
+export default function InternshipsPage() {
+  // OSTEM Internship Entries
+  const ostemInternships = [
     {
       id: 1,
-      title: 'Understanding Space Weather',
-      url: 'https://nasa.gov/space-weather',
+      title: 'OSTEM Internship 1',
+      url: 'https://nasa.gov/ostem1',
       description:
-        'Exploring the effects of solar activity on Earth and space missions.',
+        'Develop critical skills in engineering, science, and technology at NASA.',
     },
     {
       id: 2,
-      title: 'Mars Rover Missions',
-      url: 'https://nasa.gov/mars-rovers',
+      title: 'OSTEM Internship 2',
+      url: 'https://nasa.gov/ostem2',
       description:
-        'Detailed insights into the journey of NASA’s rovers on Mars.',
+        'Engage in research opportunities to contribute to NASA’s space missions.',
     },
     {
       id: 3,
-      title: 'Astrobiology and the Search for Life',
-      url: 'https://nasa.gov/astrobiology',
-      description:
-        'Examining the possibilities of life beyond Earth in extreme environments.',
+      title: 'OSTEM Internship 3',
+      url: 'https://nasa.gov/ostem3',
+      description: 'Collaborate with scientists and engineers on innovative projects.',
+    },
+  ];
+
+  // PATHWAYS Internship Entries
+  const pathwaysInternships = [
+    {
+      id: 1,
+      title: 'PATHWAYS Internship 1',
+      url: 'https://nasa.gov/pathways1',
+      description: 'Explore long-term career opportunities with hands-on experience.',
     },
     {
-      id: 4,
-      title: 'Lunar Exploration Program',
-      url: 'https://nasa.gov/lunar-program',
-      description:
-        'Join NASA’s efforts to explore the Moon and develop cutting-edge technologies for lunar exploration.',
+      id: 2,
+      title: 'PATHWAYS Internship 2',
+      url: 'https://nasa.gov/pathways2',
+      description: 'Work on groundbreaking projects that support NASA’s goals.',
     },
     {
-      id: 5,
-      title: 'Exploring Exoplanets',
-      url: 'https://nasa.gov/exoplanets',
-      description:
-        'Investigating planets outside our solar system and their potential to support life.',
+      id: 3,
+      title: 'PATHWAYS Internship 3',
+      url: 'https://nasa.gov/pathways3',
+      description: 'Gain experience in leadership, innovation, and collaboration.',
     },
   ];
 
@@ -53,46 +61,76 @@ export default function ResearchPage() {
     <div className='relative z-20 flex flex-col items-center justify-center min-h-screen'>
       {/* Top-left header */}
       <h1 className='absolute top-4 left-4 text-2xl font-bold text-white'>
-        Research
+        Internships
       </h1>
 
-      {/* Horizontal Carousel */}
-      <div className='w-full max-w-6xl flex flex-col relative'>
+      {/* OSTEM Carousel */}
+      <div className='w-full max-w-4xl mt-8'>
+        <h2 className='text-xl font-bold text-white mb-4'>OSTEM Internships</h2>
         <Carousel
-          className='flex'
+          className='flex flex-col'
           opts={{
-            axis: 'x', // Make carousel horizontal
-            align: 'start', // Align items at the start
+            axis: 'y', // Vertical carousel for OSTEM
+            align: 'start',
           }}
         >
-          {/* Carousel Content */}
-          <CarouselContent className='flex gap-4'>
-            {researchEntries.map((entry) => (
-              <CarouselItem
-                key={entry.id}
-                className='flex-shrink-0 w-[50%] md:w-[30%]'
-              >
+          <CarouselContent className='space-y-4'>
+            {ostemInternships.map((internship) => (
+              <CarouselItem key={internship.id} className='h-[300px]'>
                 <Card className='bg-gray-800 text-white shadow-md rounded-lg h-full'>
-                  <CardContent className='p-6 space-y-4 overflow-y-auto h-[300px]'>
-                    <h2 className='text-lg font-bold'>{entry.title}</h2>
+                  <CardContent className='p-6 space-y-4 overflow-y-auto'>
+                    <h2 className='text-lg font-bold'>{internship.title}</h2>
                     <a
-                      href={entry.url}
+                      href={internship.url}
                       target='_blank'
                       rel='noopener noreferrer'
                       className='text-blue-500 underline hover:text-blue-300 text-sm'
                     >
-                      {entry.url}
+                      {internship.url}
                     </a>
-                    <p className='text-sm text-gray-400'>{entry.description}</p>
+                    <p className='text-sm text-gray-400'>{internship.description}</p>
                   </CardContent>
                 </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className='text-gray-400 hover:text-white' />
+          <CarouselNext className='text-gray-400 hover:text-white' />
+        </Carousel>
+      </div>
 
-          {/* Navigation Arrows */}
-          <CarouselPrevious className='absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white' />
-          <CarouselNext className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white' />
+      {/* PATHWAYS Carousel */}
+      <div className='w-full max-w-4xl mt-16'>
+        <h2 className='text-xl font-bold text-white mb-4'>PATHWAYS Internships</h2>
+        <Carousel
+          className='flex flex-col'
+          opts={{
+            axis: 'y', // Vertical carousel for PATHWAYS
+            align: 'start',
+          }}
+        >
+          <CarouselContent className='space-y-4'>
+            {pathwaysInternships.map((internship) => (
+              <CarouselItem key={internship.id} className='h-[300px]'>
+                <Card className='bg-gray-800 text-white shadow-md rounded-lg h-full'>
+                  <CardContent className='p-6 space-y-4 overflow-y-auto'>
+                    <h2 className='text-lg font-bold'>{internship.title}</h2>
+                    <a
+                      href={internship.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-blue-500 underline hover:text-blue-300 text-sm'
+                    >
+                      {internship.url}
+                    </a>
+                    <p className='text-sm text-gray-400'>{internship.description}</p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className='text-gray-400 hover:text-white' />
+          <CarouselNext className='text-gray-400 hover:text-white' />
         </Carousel>
       </div>
     </div>
