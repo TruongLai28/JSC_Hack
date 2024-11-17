@@ -5,6 +5,9 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 
+// Import EarthAnimation
+import EarthAnimation from "@/components/EarthAnimation";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -27,13 +30,21 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarProvider>
-          <AppSidebar />
-          <main>
-            <SidebarTrigger />
-            {children}
-          </main>
-        </SidebarProvider>
+        {/* Render Earth Animation */}
+        <div className="earth-animation-container">
+          <EarthAnimation />
+        </div>
+
+        {/* Sidebar and Main Content */}
+        <div className="content-container">
+          <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarProvider>
+        </div>
       </body>
     </html>
   );
