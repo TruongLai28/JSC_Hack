@@ -42,7 +42,7 @@ export function CardWithForm({ className, ...props }) {
           transform: 'translate(-50%, -50%)',
           width: '400px',
           height: '300px',
-          backgroundColor: 'rgba(255,255,255,0.2)',
+          backgroundColor: 'rgba(255,255,255,0.1)',
           border: '2px solid rgba(255,255,255,0.2)',
           borderRadius: '12px',
           boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
