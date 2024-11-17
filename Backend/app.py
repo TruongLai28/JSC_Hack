@@ -3,7 +3,6 @@ import pandas as pd
 import os
 import chromadb.utils.embedding_functions as embedding_functions
 
-
 from dotenv import load_dotenv
 from llama_index.core.schema import TextNode
 from llama_index.core import StorageContext
@@ -115,7 +114,7 @@ async def search_ostem(request: SearchRequest):
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
-            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100 +30
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
@@ -146,7 +145,7 @@ async def search_pathway(request: SearchRequest):
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
-            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100 +30
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
@@ -177,7 +176,7 @@ async def search_event(request: SearchRequest):  # Fixed function name from sear
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
-            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100 +30
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
@@ -208,7 +207,7 @@ async def search_solicitation(request: SearchRequest):
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
-            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100 +30
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['documents'][0][i],
