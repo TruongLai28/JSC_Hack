@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Body
+from fastapi import FastAPI
 from pydantic import BaseModel
 import chromadb
 import pandas as pd
@@ -51,13 +51,39 @@ ostem_collection.add(
     ids=[str(id) for id in ostem['ID']]  # Use ID column as unique identifier
 )
 
+pathway_collection.add(
+    documents=pathway['Majors'].tolist(),  # Use Majors as the searchable text since it contains detailed field information
+    metadatas=[{
+        "title": row['Title'],
+        "education_level": row['Education Level'],
+        "url": row['URL']
+    } for _, row in pathway.iterrows()],  # Include metadata
+    ids=[str(id) for id in pathway['ID']]  # Use ID column as unique identifier
+)
+
+event_collection.add(
+    documents=event['Description'].tolist(),  # Use Description as the searchable text
+    metadatas=[{
+        "title": row['Title'],
+        "type": row['Type'],
+        "url": row['URL']
+    } for _, row in event.iterrows()],  # Include metadata
+    ids=[str(id) for id in event['ID']]  # Use ID column as unique identifier
+)
+
+solicitation_collection.add(
+    documents=solicitation['Solicitation Title'].tolist(),  # Use Title as the searchable text
+    metadatas=[{
+        "status": row['Status'],
+        "solicitation_id": row['Solicitation ID'],
+        "url": row['URL']
+    } for _, row in solicitation.iterrows()],  # Include metadata
+    ids=[str(id) for id in solicitation['ID']]  # Use ID column as unique identifier
+)
+
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
-
-@app.get("/home")
-async def Home():
-    return {"message": "This is home page"}
+    return {"message": "Hello FastAPI!"}
 
 # Define the expected request model
 class SearchRequest(BaseModel):
@@ -78,6 +104,94 @@ async def search_ostem(request: SearchRequest):
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
                 "Type": results['metadatas'][0][i]['type'],
+                "URL": results['metadatas'][0][i]['url'],
+                "Description": results['documents'][0][i]
+            })
+            
+        return {
+            "status": "success",
+            "results": formatted_results
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+
+
+@app.post("/search/pathway")
+async def search_pathway(request: SearchRequest):
+    try:
+        results = pathway_collection.query(
+            query_texts=[request.query],
+            n_results=request.num_results
+        )
+        
+        formatted_results = []
+        for i in range(len(results['documents'][0])):
+            formatted_results.append({
+                "Result": i + 1,
+                "Title": results['metadatas'][0][i]['title'],
+                "Education_Level": results['metadatas'][0][i]['education_level'],
+                "URL": results['metadatas'][0][i]['url'],
+                "Majors": results['documents'][0][i]  # This contains the majors list
+            })
+            
+        return {
+            "status": "success",
+            "results": formatted_results
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+        
+
+@app.post("/search/event")
+async def search_ostem(request: SearchRequest):
+    try:
+        results = event_collection.query(
+            query_texts=[request.query],
+            n_results=request.num_results
+        )
+        
+        formatted_results = []
+        for i in range(len(results['documents'][0])):
+            formatted_results.append({
+                "Result": i + 1,
+                "Title": results['metadatas'][0][i]['title'],
+                "Type": results['metadatas'][0][i]['type'],
+                "URL": results['metadatas'][0][i]['url'],
+                "Description": results['documents'][0][i]
+            })
+            
+        return {
+            "status": "success",
+            "results": formatted_results
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+        
+
+@app.post("/search/research")
+async def search_solicitation(request: SearchRequest):
+    try:
+        results = solicitation_collection.query(
+            query_texts=[request.query],
+            n_results=request.num_results
+        )
+        
+        formatted_results = []
+        for i in range(len(results['documents'][0])):
+            formatted_results.append({
+                "Result": i + 1,
+                "Title": results['documents'][0][i],  # This is the Solicitation Title
+                "Status": results['metadatas'][0][i]['status'],
+                "Solicitation_ID": results['metadatas'][0][i]['solicitation_id'],
                 "URL": results['metadatas'][0][i]['url']
             })
             
@@ -90,6 +204,8 @@ async def search_ostem(request: SearchRequest):
             "status": "error",
             "message": str(e)
         }
+
+
 
 
 
