@@ -1,3 +1,4 @@
+import LaunchpadPage from "@/app/Launchpad/page";
 import {
     Sidebar,
     SidebarContent,
