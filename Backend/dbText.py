@@ -124,7 +124,7 @@ for node_with_score in source_nodes:
     node = node_with_score.node
     metadata = node.metadata
     description = node.text
-    relevance = 1-node_with_score.score
+    relevance = f"{(1 - node_with_score.score):.4f}"
     print(f"ID: {metadata['id']}")
     print(f"Title: {metadata['title']}")
     print(f"URL: {metadata['url']}")
