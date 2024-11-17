@@ -2,6 +2,7 @@ import chromadb
 import pandas as pd
 import os
 import chromadb.utils.embedding_functions as embedding_functions
+from fastapi.middleware.cors import CORSMiddleware 
 
 from dotenv import load_dotenv
 from llama_index.core.schema import TextNode
@@ -14,6 +15,14 @@ from pydantic import BaseModel
 
 load_dotenv()
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins - modify for production!
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
     api_key=os.getenv('API_KEY'),
