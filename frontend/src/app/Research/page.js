@@ -2,6 +2,13 @@
 
 import * as React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function ResearchPage() {
   const researchEntries = [
@@ -26,6 +33,20 @@ export default function ResearchPage() {
       description:
         'Examining the possibilities of life beyond Earth in extreme environments.',
     },
+    {
+      id: 4,
+      title: 'Lunar Exploration Program',
+      url: 'https://nasa.gov/lunar-program',
+      description:
+        'Join NASA’s efforts to explore the Moon and develop cutting-edge technologies for lunar exploration.',
+    },
+    {
+      id: 5,
+      title: 'Exploring Exoplanets',
+      url: 'https://nasa.gov/exoplanets',
+      description:
+        'Investigating planets outside our solar system and their potential to support life.',
+    },
   ];
 
   return (
@@ -35,30 +56,44 @@ export default function ResearchPage() {
         Research
       </h1>
 
-      {/* Research Entries */}
-      <div className='w-full max-w-4xl space-y-4 mt-8'>
-        {researchEntries.map((entry) => (
-          <Card
-            key={entry.id}
-            className='bg-gray-800 text-white shadow-md rounded-lg'
-          >
-            <CardContent className='p-4 space-y-2'>
-              {/* Title */}
-              <h2 className='text-lg font-bold'>{entry.title}</h2>
-              {/* URL */}
-              <a
-                href={entry.url}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-blue-500 underline hover:text-blue-300 text-sm'
+      {/* Horizontal Carousel */}
+      <div className='w-full max-w-6xl flex flex-col relative'>
+        <Carousel
+          className='flex'
+          opts={{
+            axis: 'x', // Make carousel horizontal
+            align: 'start', // Align items at the start
+          }}
+        >
+          {/* Carousel Content */}
+          <CarouselContent className='flex gap-4'>
+            {researchEntries.map((entry) => (
+              <CarouselItem
+                key={entry.id}
+                className='flex-shrink-0 w-[50%] md:w-[30%]'
               >
-                {entry.url}
-              </a>
-              {/* Description */}
-              <p className='text-sm text-gray-400'>{entry.description}</p>
-            </CardContent>
-          </Card>
-        ))}
+                <Card className='bg-gray-800 text-white shadow-md rounded-lg h-full'>
+                  <CardContent className='p-6 space-y-4 overflow-y-auto h-[300px]'>
+                    <h2 className='text-lg font-bold'>{entry.title}</h2>
+                    <a
+                      href={entry.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-blue-500 underline hover:text-blue-300 text-sm'
+                    >
+                      {entry.url}
+                    </a>
+                    <p className='text-sm text-gray-400'>{entry.description}</p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* Navigation Arrows */}
+          <CarouselPrevious className='absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white' />
+          <CarouselNext className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white' />
+        </Carousel>
       </div>
     </div>
   );
