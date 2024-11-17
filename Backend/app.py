@@ -1,10 +1,17 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
 import chromadb
 import pandas as pd
-import chromadb.utils.embedding_functions as embedding_functions
 import os
+import chromadb.utils.embedding_functions as embedding_functions
+
+
 from dotenv import load_dotenv
+from llama_index.core.schema import TextNode
+from llama_index.core import StorageContext
+from llama_index.core import VectorStoreIndex
+from llama_index.vector_stores.chroma import ChromaVectorStore
+from llama_index.embeddings.openai import OpenAIEmbedding
+from fastapi import FastAPI
+from pydantic import BaseModel
 
 load_dotenv()
 app = FastAPI()
@@ -14,8 +21,13 @@ openai_ef = embedding_functions.OpenAIEmbeddingFunction(
     model_name="text-embedding-3-large"  # You can change to any of the three models
 )
 
+   
+# Defines model for llama inde
+embed_model = OpenAIEmbedding(model="text-embedding-3-large")
+    
+
 # Initialize ChromaDB client
-chroma_client = chromadb.Client()
+chroma_client = chromadb.PersistentClient(path="./chroma_db")
 
 # Get existing collection or create new one
 ostem_collection = chroma_client.get_or_create_collection(
@@ -80,6 +92,8 @@ solicitation_collection.add(
     } for _, row in solicitation.iterrows()],  # Include metadata
     ids=[str(id) for id in solicitation['ID']]  # Use ID column as unique identifier
 )
+
+
 
 @app.get("/")
 async def root():
@@ -205,8 +219,239 @@ async def search_solicitation(request: SearchRequest):
             "message": str(e)
         }
 
+@app.post("/event")
+async def searchEvent(request: SearchRequest):
+    try:
+        # Convert rows to nodes
+        nodes = [
+            TextNode(
+                text=row["Description"],
+                metadata={
+                    "id": row["ID"],
+                    "title": row["Title"],
+                    "url": row["URL"],
+                    "type": row["Type"],
+                },
+            )
+            for _, row in event.iterrows()
+        ]
+
+        # Create a vector store
+        vector_store = ChromaVectorStore(chroma_collection=event_collection)
+        storage_context = StorageContext.from_defaults(vector_store=vector_store)
+
+        # Create an index and query engine
+        index = VectorStoreIndex(nodes, storage_context=storage_context, embed_model=embed_model)
+        query_engine = index.as_query_engine()
+
+        # Query the engine
+        response = query_engine.query(request.query)
+
+        # Prepare results
+        results = []
+        for node_with_score in response.source_nodes:
+            node = node_with_score.node
+            metadata = node.metadata
+            description = node.text
+            relevance = 1 - node_with_score.score
+
+            results.append({
+                "id": metadata["id"],
+                "title": metadata["title"],
+                "url": metadata["url"],
+                "description": description,
+                "type": metadata["type"],
+                "relevance": relevance,
+            })
+
+        # Return all data
+        return {
+            "status": "success",
+            "query": request.query,
+            "response": response.response,
+            "results": results,
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e),
+        }
+        
+@app.post("/ostem")
+async def searchOstem(request: SearchRequest):
+    try:
+        # Convert rows to nodes
+        nodes = [
+            TextNode(
+                text=row["Description"],
+                metadata={
+                    "id": row["ID"],
+                    "title": row["Title"],
+                    "url": row["URL"],
+                    "type": row["Type"],
+                },
+            )
+            for _, row in ostem.iterrows()
+        ]
+
+        # Create a vector store
+        vector_store = ChromaVectorStore(chroma_collection=ostem_collection)
+        storage_context = StorageContext.from_defaults(vector_store=vector_store)
+
+        # Create an index and query engine
+        index = VectorStoreIndex(nodes, storage_context=storage_context, embed_model=embed_model)
+        query_engine = index.as_query_engine()
+
+        # Query the engine
+        response = query_engine.query(request.query)
+
+        # Prepare results
+        results = []
+        for node_with_score in response.source_nodes:
+            node = node_with_score.node
+            metadata = node.metadata
+            description = node.text
+            relevance = 1 - node_with_score.score
+
+            results.append({
+                "id": metadata["id"],
+                "title": metadata["title"],
+                "url": metadata["url"],
+                "description": description,
+                "type": metadata["type"],
+                "relevance": relevance,
+            })
+
+        # Return all data
+        return {
+            "status": "success",
+            "query": request.query,
+            "response": response.response,
+            "results": results,
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e),
+        }
+        
+@app.post("/pathway")
+async def searchPathway(request: SearchRequest):
+    try:
+        # Convert rows to nodes
+        nodes = [
+            TextNode(
+                text=row["Title"],
+                metadata={
+                    "id": row["ID"],
+                    "education_level": row["Education Level"],
+                    "url": row["URL"],
+                    "majors": row["Majors"],
+                },
+            )
+            for _, row in pathway.iterrows()
+        ]
+
+        # Create a vector store
+        vector_store = ChromaVectorStore(chroma_collection=pathway_collection)
+        storage_context = StorageContext.from_defaults(vector_store=vector_store)
+
+        # Create an index and query engine
+        index = VectorStoreIndex(nodes, storage_context=storage_context, embed_model=embed_model)
+        query_engine = index.as_query_engine()
+
+        # Query the engine
+        response = query_engine.query(request.query)
+
+        # Prepare results
+        results = []
+        for node_with_score in response.source_nodes:
+            node = node_with_score.node
+            metadata = node.metadata
+            title = node.text
+            relevance = 1 - node_with_score.score
+
+            results.append({
+                "id": metadata["id"],
+                "title": title,
+                "education_level": metadata["education_level"],
+                "url": metadata["url"],
+                "majors":metadata["majors"],
+                "relevance": relevance,
+            })
+
+        # Return all data
+        return {
+            "status": "success",
+            "query": request.query,
+            "response": response.response,
+            "results": results,
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e),
+        }
 
 
+@app.post("/research")
+async def searchResearch(request: SearchRequest):
+    try:
+        # Convert rows to nodes
+        nodes = [
+            TextNode(
+                text=row["Solicitation Title"],
+                metadata={
+                    "id": row["ID"],
+                    "status": row["Status"],
+                    "url": row["URL"],
+                    "solicitation_id": row["Solicitation ID"],
+                },
+            )
+            for _, row in solicitation.iterrows()
+        ]
 
+        # Create a vector store
+        vector_store = ChromaVectorStore(chroma_collection=solicitation_collection)
+        storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
+        # Create an index and query engine
+        index = VectorStoreIndex(nodes, storage_context=storage_context, embed_model=embed_model)
+        query_engine = index.as_query_engine()
 
+        # Query the engine
+        response = query_engine.query(request.query)
+
+        # Prepare results
+        results = []
+        for node_with_score in response.source_nodes:
+            node = node_with_score.node
+            metadata = node.metadata
+            title = node.text
+            relevance = 1 - node_with_score.score
+
+            results.append({
+                "id": metadata["id"],
+                "title": title,
+                "status": metadata["status"],
+                "url": metadata["url"],
+                "solicitation_id":metadata["solicitation_id"],
+                "relevance": relevance,
+            })
+
+        # Return all data
+        return {
+            "status": "success",
+            "query": request.query,
+            "response": response.response,
+            "results": results,
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e),
+        }
