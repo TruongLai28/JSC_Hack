@@ -2,9 +2,10 @@
 import chromadb
 import pandas as pd
 import os
-import openai
-import json
+import chromadb.utils.embedding_functions as embedding_functions
 
+
+from dotenv import load_dotenv
 from llama_index.core.schema import TextNode
 from llama_index.core import StorageContext
 from llama_index.core import VectorStoreIndex
@@ -12,8 +13,13 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.embeddings.openai import OpenAIEmbedding
 from IPython.display import Markdown
 
+
+
 # Setup Model
-openai.api_key = os.environ["OPENAI_API_KEY"]
+openai_ef = embedding_functions.OpenAIEmbeddingFunction(
+    api_key=os.getenv('API_KEY'),
+    model_name="text-embedding-3-large"  # You can change to any of the three models
+)
 
 query = "People relation and human interaction managment opportunities for gradutate and undergraduate students"
 
@@ -122,7 +128,7 @@ for node_with_score in source_nodes:
     print(f"ID: {metadata['id']}")
     print(f"Title: {metadata['title']}")
     print(f"URL: {metadata['url']}")
-    print(f"URL: {metadata['url']}")
+    print(f"Description: {description}")
     print(f"Type: {metadata['type']}")
     print(f"Relevance: {relevance}%")
     print("-" * 50)
