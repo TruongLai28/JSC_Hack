@@ -1,1 +1,2 @@
 # JSC_Hack
+DISCORD IS DOWN!!!
