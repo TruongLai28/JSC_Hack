@@ -1,118 +1,94 @@
 'use client';
 
-import { useState } from 'react';
+import * as React from 'react';
 
-const eventsData = [
-  { id: 1, title: 'Event 1', description: 'Details about Event 1' },
-  { id: 2, title: 'Event 2', description: 'Details about Event 2' },
-  { id: 3, title: 'Event 3', description: 'Details about Event 3' },
-];
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function EventsPage() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % eventsData.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + eventsData.length) % eventsData.length
-    );
-  };
+  const events = [
+    {
+      id: 1,
+      title: 'Event 1',
+      url: 'https://example.com/event1',
+      description: 'Details about Event 1.',
+    },
+    {
+      id: 2,
+      title: 'Event 2',
+      url: 'https://example.com/event2',
+      description: 'Details about Event 2.',
+    },
+    {
+      id: 3,
+      title: 'Event 3',
+      url: 'https://example.com/event3',
+      description: 'Details about Event 3.',
+    },
+    {
+      id: 4,
+      title: 'Event 4',
+      url: 'https://example.com/event4',
+      description: 'Details about Event 4.',
+    },
+    {
+      id: 5,
+      title: 'Event 5',
+      url: 'https://example.com/event5',
+      description: 'Details about Event 5.',
+    },
+  ];
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        height: '100vh',
-        backgroundColor: '#f5f5f5',
-        padding: '20px',
-      }}
-    >
-      {/* Top-Right Heading */}
-      <h1
-        style={{
-          position: 'absolute',
-          top: '20px',
-          right: '20px',
-          fontSize: '24px',
-          color: '#333',
-        }}
-      >
+    <div className='relative z-20 flex flex-col items-center justify-center min-h-screen'>
+      {/* Top-left header */}
+      <h1 className='absolute top-4 left-4 text-2xl font-bold text-white'>
         Events
       </h1>
 
       {/* Carousel */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-        }}
-      >
-        <div
-          style={{
-            width: '80%',
-            height: '300px',
-            backgroundColor: '#fff',
-            borderRadius: '12px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '20px',
-            textAlign: 'center',
+      <div className='w-full max-w-6xl'>
+        <Carousel
+          opts={{
+            align: 'start', // Align items to the start
           }}
         >
-          <div>
-            <h2 style={{ fontSize: '20px', color: '#333' }}>
-              {eventsData[currentSlide].title}
-            </h2>
-            <p style={{ color: '#666' }}>
-              {eventsData[currentSlide].description}
-            </p>
-          </div>
-        </div>
-
-        {/* Navigation Buttons */}
-        <div
-          style={{
-            marginTop: '20px',
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '10px',
-          }}
-        >
-          <button
-            onClick={handlePrev}
-            style={{
-              padding: '10px 20px',
-              backgroundColor: '#007bff',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-            }}
-          >
-            Previous
-          </button>
-          <button
-            onClick={handleNext}
-            style={{
-              padding: '10px 20px',
-              backgroundColor: '#007bff',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-            }}
-          >
-            Next
-          </button>
-        </div>
+          <CarouselContent>
+            {events.map((event) => (
+              <CarouselItem
+                key={event.id}
+                className='md:basis-1/2 lg:basis-1/3'
+              >
+                <div className='p-2'>
+                  <Card className='bg-gray-800 text-white shadow-md rounded-lg'>
+                    <CardContent className='p-4 space-y-4'>
+                      <h2 className='text-lg font-bold'>{event.title}</h2>
+                      <p className='text-sm text-gray-400'>
+                        {event.description}
+                      </p>
+                      <a
+                        href={event.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-blue-500 underline hover:text-blue-300'
+                      >
+                        Learn More
+                      </a>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className='text-gray-400 hover:text-white' />
+          <CarouselNext className='text-gray-400 hover:text-white' />
+        </Carousel>
       </div>
     </div>
   );

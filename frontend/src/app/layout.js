@@ -1,6 +1,6 @@
 import localFont from 'next/font/local';
 import './globals.css';
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
 import EarthAnimation from '@/components/EarthAnimation';
 
@@ -26,19 +26,25 @@ export default function Layout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Render Earth Animation */}
-        <div className='earth-animation-container'>
+        {/* Background Animation */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1, // Send EarthAnimation to the background
+          }}
+        >
           <EarthAnimation />
         </div>
 
         {/* Sidebar and Main Content */}
-        <div className='content-container flex'>
+        <div className='relative z-10 flex'>
           <SidebarProvider>
             <AppSidebar />
-            <main className='flex-1 ml-64 p-4'>
-              <SidebarTrigger />
-              {children}
-            </main>
+            <main className='flex-1 ml-64'>{children}</main>
           </SidebarProvider>
         </div>
       </body>

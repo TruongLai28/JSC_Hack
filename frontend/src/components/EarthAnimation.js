@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import React, { useEffect, useRef } from 'react';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const EarthAnimation = () => {
   const mountRef = useRef(null);
@@ -26,16 +26,15 @@ const EarthAnimation = () => {
       scene = new THREE.Scene();
 
       // Sun
-      const sun = new THREE.DirectionalLight("#ffffff", 2);
+      const sun = new THREE.DirectionalLight('#ffffff', 2);
       sun.position.set(0, 0, 3);
       scene.add(sun);
 
       // Texture Loader
       const textureLoader = new THREE.TextureLoader();
-      const dayTexture = textureLoader.load("/textures/earth_day_4096.jpg");
-      const nightTexture = textureLoader.load("/textures/earth_night_4096.jpg");
+      const dayTexture = textureLoader.load('/textures/earth_day_4096.jpg');
       const bumpTexture = textureLoader.load(
-        "/textures/earth_bump_roughness_clouds_4096.jpg"
+        '/textures/earth_bump_roughness_clouds_4096.jpg'
       );
 
       // Globe Material
@@ -54,14 +53,24 @@ const EarthAnimation = () => {
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(window.devicePixelRatio);
-      mountRef.current.appendChild(renderer.domElement);
+
+      if (mountRef.current) {
+        mountRef.current.appendChild(renderer.domElement);
+
+        // Prevent scroll wheel zoom directly
+        mountRef.current.addEventListener('wheel', (event) => {
+          event.preventDefault();
+        });
+      }
 
       // Controls
       controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
+      controls.enableDamping = true; // Smooth camera movement
+      controls.enableZoom = false; // Explicitly disable zoom
+      controls.zoomSpeed = 0; // Ensure zoom speed is zero
 
       // Resize Event
-      window.addEventListener("resize", onWindowResize);
+      window.addEventListener('resize', onWindowResize);
 
       animate();
     };
@@ -84,12 +93,20 @@ const EarthAnimation = () => {
 
     // Cleanup
     return () => {
-      mountRef.current.innerHTML = "";
-      renderer.dispose();
+      if (mountRef.current) {
+        mountRef.current.innerHTML = ''; // Safely clear content
+        mountRef.current.removeEventListener('wheel', (event) =>
+          event.preventDefault()
+        ); // Remove wheel listener
+      }
+      if (renderer) {
+        renderer.dispose(); // Dispose of renderer
+      }
+      window.removeEventListener('resize', onWindowResize);
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: "100%", height: "100vh" }} />;
+  return <div ref={mountRef} style={{ width: '100%', height: '100vh' }} />;
 };
 
 export default EarthAnimation;
