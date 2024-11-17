@@ -15,6 +15,14 @@ import { Badge } from '@/components/ui/badge';
 
 export default function LaunchPage() {
   const [selectedInterests, setSelectedInterests] = useState([]);
+  const [role, setRole] = useState('');
+  const [fieldOfStudy, setFieldOfStudy] = useState('');
+  const [results, setResults] = useState({
+    ostem: null,
+    pathway: null,
+    event: null,
+    research: null
+  });
   const allInterests = [
     'Technology',
     'Science',
@@ -32,6 +40,52 @@ export default function LaunchPage() {
     );
   };
 
+  const handleSubmit = async () => {
+    const query = `I'm ${role}, my field of study is ${fieldOfStudy} and my interests are ${selectedInterests.join(', ')}`;
+    
+    const requestBody = { 
+      query: query,
+      num_results: 3
+    };
+
+    try {
+      const endpoints = ['ostem', 'pathway', 'event', 'research'];
+      const promises = endpoints.map(endpoint => 
+        fetch(`http://localhost:8000/search/${endpoint}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(requestBody)
+        }).then(res => res.json())
+      );
+
+      const [ostemData, pathwayData, eventData, researchData] = await Promise.all(promises);
+      
+      // Save all results to state
+      setResults({
+        ostem: ostemData,
+        pathway: pathwayData,
+        event: eventData,
+        research: researchData
+      });
+
+      // Log all responses
+      console.log('OSTEM Response:', ostemData);
+      console.log('Pathway Response:', pathwayData);
+      console.log('Event Response:', eventData);
+      console.log('Research Response:', researchData);
+
+      // Save results to localStorage
+      localStorage.setItem('searchResults', JSON.stringify({
+        pathway: pathwayData,
+        event: eventData,
+        research: researchData
+      }));
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <div className='relative z-20 flex flex-col items-center justify-center min-h-screen'>
       {/* Header */}
@@ -39,25 +93,28 @@ export default function LaunchPage() {
         Launch Page
       </h1>
 
-      {/* "What are you?" Section */}
+      {/* "What are you?" Section - Updated with onChange */}
       <div className='w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md mb-6'>
         <h2 className='text-lg font-semibold mb-4 text-white'>What are you?</h2>
         <div className='space-y-3 text-white'>
           {['Student', 'Teacher', 'Both'].map((option) => (
             <div key={option} className='flex items-center space-x-2'>
-              <Checkbox id={option} className='bg-white border-gray-300' />
+              <Checkbox 
+                id={option} 
+                className='bg-white border-gray-300'
+                checked={role === option}
+                onCheckedChange={() => setRole(option)}
+              />
               <Label htmlFor={option}>{option}</Label>
             </div>
           ))}
         </div>
       </div>
 
-      {/* "Field of Study" Section */}
+      {/* "Field of Study" Section - Updated with onChange */}
       <div className='w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md mb-6'>
-        <h2 className='text-lg font-semibold mb-4 text-white'>
-          Field of Study
-        </h2>
-        <Select>
+        <h2 className='text-lg font-semibold mb-4 text-white'>Field of Study</h2>
+        <Select onValueChange={setFieldOfStudy} value={fieldOfStudy}>
           <SelectTrigger className='w-full'>
             <SelectValue placeholder='Select a field of study' />
           </SelectTrigger>
@@ -98,6 +155,14 @@ export default function LaunchPage() {
           ))}
         </div>
       </div>
+
+      {/* Submit Button - Updated with onClick */}
+      <button 
+        onClick={handleSubmit}
+        className='mt-6 px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-semibold transition-colors'
+      >
+        Submit
+      </button>
     </div>
   );
 }
