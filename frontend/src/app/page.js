@@ -13,56 +13,55 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 
 export function CardWithForm({ className, ...props }) {
   return (
     <div
       style={{
         position: 'relative',
-        justifyContent: 'flex-end',
-        height: '100vh',
+        display: 'flex',
+        justifyContent: 'flex-end', // Align card to the right
+        alignItems: 'center', // Center vertically
+        height: '100vh', // Full page height
+        paddingRight: '5%', // Add padding to the right side
       }}
     >
       <Card
         className={cn(className)}
         {...props}
         style={{
-          position: 'fixed',
-          top: '50%',
-          left: '76.66%',
-          transform: 'translate(-50%, -50%)',
-          width: '400px',
-          height: '300px',
-          backgroundColor: '#1F2937',
+          position: 'relative',
+          width: '90%',
+          maxWidth: '400px', // Max width for the card
+          backgroundColor: '#1F2937', // Transparent white background
           border: '2px solid rgba(255,255,255,0.2)',
           borderRadius: '12px',
           boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
           color: 'white',
+          padding: '1rem',
+          overflow: 'hidden',
         }}
       >
         <CardHeader
           style={{
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'column',
             alignItems: 'center',
+            marginBottom: '1rem',
           }}
         >
-          <CardTitle>Welcome!</CardTitle>
-          <CardDescription></CardDescription>
+          <CardTitle className='text-xxl font-bold'>Welcome!</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>
-            This is a great website to learn more about all the possibilities of
-            NASA events and internship opportunities
+          <p className='text-med leading-relaxed text-center'>
+            Welcome to your gateway to endless possibilities at NASA! Here, you
+            can uncover opportunities that align with your passions, field of
+            study, and major, empowering you to launch an inspiring career in
+            space exploration, innovation, and discovery. Whether you're driven
+            by engineering, science, or creative problem-solving, this platform
+            connects you to internships, research projects, and events tailored
+            to your dreams. Together, let's turn your aspirations into reality
+            and ignite a future where you reach for the stars.
           </p>
         </CardContent>
         <CardFooter
@@ -70,6 +69,7 @@ export function CardWithForm({ className, ...props }) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            marginTop: '1rem',
             color: 'black',
           }}
         >
