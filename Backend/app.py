@@ -42,13 +42,13 @@ solicitation = pd.read_csv("data/solicitations.csv")
 
 # Add documents to collection
 ostem_collection.add(
-    documents=ostem['Description'].tolist(),  # Use Description as the searchable text
+    documents=[f"{row['Title']}. {row['Description']}" for _, row in ostem.iterrows()],  # Combine title and description
     metadatas=[{
         "title": row['Title'],
         "type": row['Type'],
         "url": row['URL']
-    } for _, row in ostem.iterrows()],  # Include metadata
-    ids=[str(id) for id in ostem['ID']]  # Use ID column as unique identifier
+    } for _, row in ostem.iterrows()],
+    ids=[str(id) for id in ostem['ID']]
 )
 
 pathway_collection.add(
@@ -62,13 +62,13 @@ pathway_collection.add(
 )
 
 event_collection.add(
-    documents=event['Description'].tolist(),  # Use Description as the searchable text
+    documents=[f"{row['Title']}. {row['Description']}" for _, row in ostem.iterrows()],  # Combine title and description
     metadatas=[{
         "title": row['Title'],
         "type": row['Type'],
         "url": row['URL']
-    } for _, row in event.iterrows()],  # Include metadata
-    ids=[str(id) for id in event['ID']]  # Use ID column as unique identifier
+    } for _, row in ostem.iterrows()],
+    ids=[str(id) for id in ostem['ID']]
 )
 
 solicitation_collection.add(
@@ -77,7 +77,7 @@ solicitation_collection.add(
         "status": row['Status'],
         "solicitation_id": row['Solicitation ID'],
         "url": row['URL']
-    } for _, row in solicitation.iterrows()],  # Include metadata
+    } for _, row in solicitation.iterrows()],  
     ids=[str(id) for id in solicitation['ID']]  # Use ID column as unique identifier
 )
 
@@ -95,17 +95,20 @@ async def search_ostem(request: SearchRequest):
     try:
         results = ostem_collection.query(
             query_texts=[request.query],
-            n_results=request.num_results
+            n_results=request.num_results,
+            include=['metadatas', 'documents', 'distances']  # Add distances
         )
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
                 "Type": results['metadatas'][0][i]['type'],
                 "URL": results['metadatas'][0][i]['url'],
-                "Description": results['documents'][0][i]
+                "Description": results['documents'][0][i],
+                "Similarity": f"{round(similarity_score, 1)}%"
             })
             
         return {
@@ -117,24 +120,26 @@ async def search_ostem(request: SearchRequest):
             "status": "error",
             "message": str(e)
         }
-
 
 @app.post("/search/pathway")
 async def search_pathway(request: SearchRequest):
     try:
         results = pathway_collection.query(
             query_texts=[request.query],
-            n_results=request.num_results
+            n_results=request.num_results,
+            include=['metadatas', 'documents', 'distances']  # Add distances
         )
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
                 "Education_Level": results['metadatas'][0][i]['education_level'],
                 "URL": results['metadatas'][0][i]['url'],
-                "Majors": results['documents'][0][i]  # This contains the majors list
+                "Majors": results['documents'][0][i],
+                "Similarity": f"{round(similarity_score, 1)}%"
             })
             
         return {
@@ -146,24 +151,26 @@ async def search_pathway(request: SearchRequest):
             "status": "error",
             "message": str(e)
         }
-        
 
 @app.post("/search/event")
-async def search_ostem(request: SearchRequest):
+async def search_event(request: SearchRequest):  # Fixed function name from search_ostem
     try:
         results = event_collection.query(
             query_texts=[request.query],
-            n_results=request.num_results
+            n_results=request.num_results,
+            include=['metadatas', 'documents', 'distances']  # Add distances
         )
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
             formatted_results.append({
                 "Result": i + 1,
                 "Title": results['metadatas'][0][i]['title'],
                 "Type": results['metadatas'][0][i]['type'],
                 "URL": results['metadatas'][0][i]['url'],
-                "Description": results['documents'][0][i]
+                "Description": results['documents'][0][i],
+                "Similarity": f"{round(similarity_score, 1)}%"
             })
             
         return {
@@ -175,24 +182,26 @@ async def search_ostem(request: SearchRequest):
             "status": "error",
             "message": str(e)
         }
-        
 
 @app.post("/search/research")
 async def search_solicitation(request: SearchRequest):
     try:
         results = solicitation_collection.query(
             query_texts=[request.query],
-            n_results=request.num_results
+            n_results=request.num_results,
+            include=['metadatas', 'documents', 'distances']  # Add distances
         )
         
         formatted_results = []
         for i in range(len(results['documents'][0])):
+            similarity_score = (1 - (results['distances'][0][i] / 2)) * 100
             formatted_results.append({
                 "Result": i + 1,
-                "Title": results['documents'][0][i],  # This is the Solicitation Title
+                "Title": results['documents'][0][i],
                 "Status": results['metadatas'][0][i]['status'],
                 "Solicitation_ID": results['metadatas'][0][i]['solicitation_id'],
-                "URL": results['metadatas'][0][i]['url']
+                "URL": results['metadatas'][0][i]['url'],
+                "Similarity": f"{round(similarity_score, 1)}%"
             })
             
         return {
