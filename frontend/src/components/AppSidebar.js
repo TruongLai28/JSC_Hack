@@ -1,76 +1,51 @@
-import LaunchpadPage from "@/app/Launchpad/page";
 import {
-    Sidebar,
-    SidebarContent,
-    SidebarGroup,
-    SidebarGroupContent,
-    SidebarGroupLabel,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
-    SidebarHeader,
-    SidebarFooter,
-  } from "@/components/ui/sidebar";
-  
-  // Import HeroIcons
-  import { HomeIcon, RocketLaunchIcon, AcademicCapIcon, BeakerIcon, CalendarIcon } from "@heroicons/react/24/outline";
-  
-  // Menu items with HeroIcons
-  const items = [
+  HomeIcon,
+  RocketLaunchIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  CalendarIcon,
+} from '@heroicons/react/24/outline';
+
+export function AppSidebar() {
+  const menuItems = [
+    { name: 'Home', icon: <HomeIcon className='h-6 w-6' />, href: '/' },
     {
-      title: "Home",
-      url: "#",
-      icon: HomeIcon,
+      name: 'Launch',
+      icon: <RocketLaunchIcon className='h-6 w-6' />,
+      href: '/launch',
     },
     {
-      title: "Launchpad",
-      url: "#",
-      icon: RocketLaunchIcon,
+      name: 'Internships',
+      icon: <AcademicCapIcon className='h-6 w-6' />,
+      href: '/internships',
     },
     {
-      title: "Internships",
-      url: "#",
-      icon: AcademicCapIcon,
+      name: 'Research',
+      icon: <BeakerIcon className='h-6 w-6' />,
+      href: '/research',
     },
     {
-      title: "Research",
-      url: "#",
-      icon: BeakerIcon,
-    },
-    {
-      title: "Events",
-      url: "#",
-      icon: CalendarIcon,
+      name: 'Events',
+      icon: <CalendarIcon className='h-6 w-6' />,
+      href: '/events',
     },
   ];
-  
-  export function AppSidebar() {
-    return (
-      <Sidebar>
-        <SidebarHeader />
-        <SidebarContent>
-          <SidebarGroup>
-            <SidebarGroupLabel>Application</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
-                      <a href={item.url} className="flex items-center space-x-2">
-                        {/* Render Icon */}
-                        <item.icon className="h-5 w-5 text-gray-500" />
-                        {/* Render Title */}
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </SidebarContent>
-        <SidebarFooter />
-      </Sidebar>
-    );
-  }
-  
+
+  return (
+    <aside className='bg-slate-800 text-white w-64 h-screen fixed top-0 left-0 p-4 flex flex-col'>
+      <div className='mb-8 text-xl font-bold'>Rocket Launch xD</div>
+      <nav>
+        {menuItems.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className='flex items-center p-2 mb-2 rounded hover:bg-blue-700 transition'
+          >
+            {item.icon}
+            <span className='ml-4'>{item.name}</span>
+          </a>
+        ))}
+      </nav>
+    </aside>
+  );
+}
