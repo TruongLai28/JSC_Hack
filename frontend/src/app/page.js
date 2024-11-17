@@ -27,22 +27,26 @@ export function CardWithForm({ className, ...props }) {
   return (
     <div
       style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        position: 'relative',
+        justifyContent: 'flex-end',
         height: '100vh',
-        backgroundColor: '#f0f0f0',
       }}
     >
       <Card
-        className={cn('w-[380px]', className)}
+        className={cn(className)}
         {...props}
         style={{
-          backgroundColor: 'transparent',
-          border: '1px solid rgba(255,255,255,0.2)',
+          position: 'fixed',
+          top: '50%',
+          left: '76.66%',
+          transform: 'translate(-50%, -50%)',
+          width: '400px',
+          height: '300px',
+          backgroundColor: 'rgba(255,255,255,0.2)',
+          border: '2px solid rgba(255,255,255,0.2)',
           borderRadius: '12px',
-          padding: '16px',
           boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+          color: 'white',
         }}
       >
         <CardHeader
@@ -66,6 +70,7 @@ export function CardWithForm({ className, ...props }) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            color: 'black',
           }}
         >
           <Link href='/launch'>
