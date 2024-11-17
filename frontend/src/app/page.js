@@ -67,7 +67,9 @@ export function CardWithForm({ className, ...props }) {
             alignItems: 'center',
           }}
         >
-          <Button variant='outline'>Launch</Button>
+          <link href='/launch'>
+            <Button variant='outline'>Launch</Button>
+          </link>
         </CardFooter>
       </Card>
     </div>
