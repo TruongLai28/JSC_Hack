@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -67,9 +68,9 @@ export function CardWithForm({ className, ...props }) {
             alignItems: 'center',
           }}
         >
-          <link href='/launch'>
+          <Link href='/launch'>
             <Button variant='outline'>Launch</Button>
-          </link>
+          </Link>
         </CardFooter>
       </Card>
     </div>
